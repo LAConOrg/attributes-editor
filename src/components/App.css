@@ -1,0 +1,176 @@
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-header {
+  margin-bottom: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  min-height: 80vh;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Error Display */
+.error-display {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #b91c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* YAML Editor */
+.yaml-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.yaml-editor-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  color: #333;
+}
+
+.yaml-editor-textarea {
+  flex: 1;
+  min-height: 400px;
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+  font-size: 0.875rem;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #fafafa;
+}
+
+.yaml-editor-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.yaml-editor-textarea-error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.yaml-editor-textarea-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Attribute Form */
+.attribute-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribute-form-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  color: #333;
+}
+
+.attribute-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Field Styles */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.125rem;
+}
+
+.field-required {
+  color: #ef4444;
+  margin-left: 0.25rem;
+}
+
+.field-key {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 0.375rem;
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+}
+
+.field-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: #fff;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.field-input:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.field-input-error {
+  border-color: #ef4444;
+}
+
+.field-input-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+.field-error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.field-other-input {
+  margin-top: 0.5rem;
+}
+
+/* DateTime Field */
+.field-datetime-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field-datetime-input {
+  flex: 0 1 auto;
+}
+
+.field-timezone-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
