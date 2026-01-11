@@ -11,4 +11,4 @@ worry about proper escaping and quoting in the YAML.
 ## Deployment
 
 Changes to the `main` branch are built using a GitHub action and hosted on
-[https://laconorg.github.io/attributes-editor/]
+https://laconorg.github.io/attributes-editor/
