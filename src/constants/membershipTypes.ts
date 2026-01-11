@@ -10,6 +10,10 @@ export const MEMBERSHIP_TYPES: MembershipTypeOption[] = [
     label: "Full Attending Adult - First Worldcon (option2)",
   },
   {
+    value: "virtualMembership",
+    label: "Virtual Membership (virtualMembership)",
+  },
+  {
     value: "youngAdultAttending",
     label: "Full Attending Young Adult (youngAdultAttending)",
   },
