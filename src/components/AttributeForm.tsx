@@ -1,6 +1,7 @@
 import { TextField } from './fields/TextField';
 import { DropdownField } from './fields/DropdownField';
 import { DateTimeField } from './fields/DateTimeField';
+import { BooleanField } from './fields/BooleanField';
 import { YAML_KEYS } from '../types/attributes';
 import type { AttributeValues } from '../types/attributes';
 
@@ -58,6 +59,13 @@ export function AttributeForm({ values, onChange, disabled }: AttributeFormProps
           value={values[YAML_KEYS.REGISTRATION_TIMESTAMP] || ''}
           onChange={handleChange(YAML_KEYS.REGISTRATION_TIMESTAMP)}
           required
+          disabled={disabled}
+        />
+        <BooleanField
+          label="Must use username"
+          yamlKey={YAML_KEYS.MUST_USE_USERNAME}
+          value={values[YAML_KEYS.MUST_USE_USERNAME] || ''}
+          onChange={handleChange(YAML_KEYS.MUST_USE_USERNAME)}
           disabled={disabled}
         />
         <TextField

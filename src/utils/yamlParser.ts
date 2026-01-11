@@ -8,6 +8,11 @@ const FIELD_ORDER = [
   YAML_KEYS.MEMBERSHIP_TYPE,
   YAML_KEYS.REGISTRATION_TIMESTAMP,
   YAML_KEYS.MANUALLY_CREATED_BY,
+  YAML_KEYS.MUST_USE_USERNAME,
+];
+
+const BOOLEAN_FIELDS: readonly string[] = [
+  YAML_KEYS.MUST_USE_USERNAME,
 ];
 
 export type ParseResult =
@@ -52,12 +57,16 @@ export function parseYaml(yamlString: string): ParseResult {
 }
 
 export function dumpYaml(data: Record<string, string | undefined>): string {
-  const orderedData: Record<string, string> = {};
+  const orderedData: Record<string, string | boolean> = {};
 
   for (const key of FIELD_ORDER) {
     const value = data[key];
     if (value !== undefined && value !== '') {
-      orderedData[key] = value;
+      if (BOOLEAN_FIELDS.includes(key)) {
+        orderedData[key] = value === 'true';
+      } else {
+        orderedData[key] = value;
+      }
     }
   }
 
