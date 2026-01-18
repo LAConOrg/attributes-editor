@@ -1,4 +1,5 @@
 export const YAML_KEYS = {
+  NOTES: 'notes',
   REG_ID: 'worldcon.org/reg-id',
   NAME: 'worldcon.org/name',
   BADGE_NAME: 'worldcon.org/badge-name',
