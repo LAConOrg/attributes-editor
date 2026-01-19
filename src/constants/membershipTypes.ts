@@ -4,43 +4,31 @@ export interface MembershipTypeOption {
 }
 
 export const MEMBERSHIP_TYPES: MembershipTypeOption[] = [
-  { value: "option1", label: "Full Attending Adult (option1)" },
-  {
-    value: "option2",
-    label: "Full Attending Adult - First Worldcon (option2)",
-  },
-  {
-    value: "virtualMembership",
-    label: "Virtual Membership (virtualMembership)",
-  },
+  { value: "option1", label: "Full Attending Adult" },
+  { value: "option2", label: "Full Attending Adult - First Worldcon" },
   {
     value: "youngAdultAttending",
-    label: "Full Attending Young Adult (youngAdultAttending)",
+    label: "Full Attending Young Adult (ages 18-24)",
   },
-  { value: "teenAttending", label: "Full Attending Teen (teenAttending)" },
+  { value: "teenAttending", label: "Full Attending Teen (ages 13-17)" },
+  { value: "childAttending", label: "Child Attending (ages 6-12)" },
+  {
+    value: "kidInTow",
+    label: "Kid in Tow (ages 0-5, requires adult registration)",
+  },
   {
     value: "wsfsMembershipOnly",
-    label: "WSFS Membership Only (wsfsMembershipOnly)",
+    label: "WSFS Membership Only (no convention activities)",
   },
-  { value: "childAttending", label: "Child Attending (childAttending)" },
-  { value: "kidInTow", label: "Kid in Tow (kidInTow)" },
-  {
-    value: "voyagerPresupporterUpgradeTo",
-    label: "Voyager Pre-supporter (voyagerPresupporterUpgradeTo)",
-  },
-  {
-    value: "navigatorPresupporterVotedIn",
-    label: "Navigator Pre-Supporter (navigatorPresupporterVotedIn)",
-  },
+  { value: "virtualMembership", label: "Virtual (Online) Membership" },
   {
     value: "wsfsMembershipSiteSelection",
-    label:
-      "WSFS Membership, voted site selection (wsfsMembershipSiteSelection)",
+    label: "WSFS Membership, voted site selection",
   },
   {
-    value: "presupportAttendingSupplement",
+    value: "voyagerPresupporterUpgradeTo",
     label:
-      "Attending Supplement, Navigator Pre-Supporter (presupportAttendingSupplement)",
+      "Voyager Pre-supporter, Upgrade to Full Attending Membership + WSFS Membership",
   },
 ];
 
